@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body id="body">
+    <h1 style="text-align: center; color: aqua">Hello</h1>
+    <button v-on:click="add(10)">Add 10</button>
+    <button v-on:click.right="reduce(100)">Reduce 100</button>
+    <button v-on:click="reset">Resset</button>
+    <p v-once>Starting Score : {{score}}</p>
+    <p>Score : {{score}}</p>
+    <input
+      type="text"
+      v-on:input="setName($event,'ouahidi')"
+      v-on:keyup.enter="riglnda()"
+    />
+    <p>Your name : {{name}}</p>
+    <p>Your name : {{confname}}</p>
+    <form v-on:submit.prevent="rigl">
+      <input type="text" />
+      <input
+        style="background-color: red; border-radius: 50%"
+        type="submit"
+        value="submit"
+      />
+    </form>
+    <script src="app2.js"></script>
+  </body>
+</html>

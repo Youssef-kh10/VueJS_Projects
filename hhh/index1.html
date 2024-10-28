@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body id="achraf">
+    <button v-on:click="add(5)">Add 5</button>
+    <button v-on:click="reduce(4)">Reduce 4</button>
+    <p>Your result : {{score}}</p>
+
+    <input
+      type="text"
+      v-bind:value="name"
+      v-on:input="setname"
+      v-on:keyup.enter="setnamee"
+    />
+    <button v-on:click="reset">reset</button>
+    <p>what you write : {{name}}</p>
+    <p>what you write : {{name1}}</p>
+    <script src="app1.js"></script>
+  </body>
+</html>

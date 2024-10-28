@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body id="body">
+    <button v-on:click="add(19)">Add 19</button>
+    <button v-on:click.right="reduce(12)">Reduce 12</button>
+    <p v-once>Start Score :{{count}}</p>
+    <p>Your Score :{{count}}</p>
+    <form v-on:submit="sub">
+      <input type="text" />
+      <input type="submit" value="Submit" />
+    </form>
+    <input
+      type="text"
+      v-on:input="rigl($event,'ouahidi')"
+      v-on:keyup.enter="rigl1()"
+    />
+    <p>This is what you write : {{name}}</p>
+    <p>This is what you write after click enter: {{name1}}</p>
+
+    <hr />
+    <!-- <h2 style="text-align: center" v-html="hey()"></h2> -->
+    <script src="app.js"></script>
+  </body>
+</html>
